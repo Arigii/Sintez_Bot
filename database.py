@@ -120,7 +120,7 @@ def count_all_limits(user_id, limit_type):
         return 0
 
 
-def count_all_blocks(user_id, db_name="messages.db"):
+def count_all_blocks(user_id, db_name=path_to_db):
     try:
         # Подключаемся к базе
         with sqlite3.connect(db_name) as conn:
@@ -141,7 +141,7 @@ def count_all_blocks(user_id, db_name="messages.db"):
         return None
 
 
-def count_all_symbol(user_id, db_name="messages.db"):
+def count_all_symbol(user_id, db_name=path_to_db):
     try:
         # Подключаемся к базе
         with sqlite3.connect(db_name) as conn:
